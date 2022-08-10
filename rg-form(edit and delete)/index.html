@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .container {
+            margin: 10px 450px;
+            padding: 30px 10px;
+            border: 2px solid rgb(80, 92, 61);
+            border-radius: 10px;
+            width: 33%;
+        }
+
+        h3 {
+            text-align: center;
+            color: orangered;
+        }
+
+        #p {
+            text-align: center;
+        }
+
+        form {
+            background-image: url(fm.png);
+        }
+
+        .btn {
+            width: 520px;
+            background-color: lightsalmon;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3>Book a call</h3>
+        <p id="p">Book a call slot and our representative will call you within 1hr of selected time.</p>
+
+        <hr>
+        <form onsubmit="saveToLocalStorage(event)">
+
+            <div>
+                <label for="name">Name:</label> <br>
+                <input type="text" name="myname" id="name" size="70">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email</label> <br>
+                <input type="email" name="myemail" id="email" size="70">
+
+            </div>
+
+            <br>
+
+            <div>
+                <label for="phone">Phone:</label> <br>
+                <input type="text" name="myphone" id="phone" size="70">
+
+            </div>
+            <br>
+
+
+            <label for="date">Time for call:</label> <br>
+
+            <span>
+                <input type="datetime-local" class="mydate" id="date">
+            </span>
+
+            <br>
+            <br>
+
+            <div>
+                <button class="btn"> GET A CALL</button>
+            </div>
+
+
+
+        </form>
+        <ul id="listOfUsers"></ul>
+    </div>
+    <!-- <script src="savedata.js"></script> -->
+    <script src="editdata.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</body>
+
+</html>
